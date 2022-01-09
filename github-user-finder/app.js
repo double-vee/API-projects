@@ -15,5 +15,7 @@ searchUser.addEventListener("keyup", (e) => {
         }
       })
       .catch(console.log);
+  } else {
+    ui.clearProfile();
   }
 });
