@@ -34,6 +34,7 @@ class UI {
 
   showAlert(message, className) {
     this.clearAlert();
+    this.clearProfile();
     const alert = document.createElement("div");
     alert.className = className;
     alert.innerText = message;
@@ -46,5 +47,9 @@ class UI {
     if (currentAlert) {
       currentAlert.remove();
     }
+  }
+
+  clearProfile() {
+    this.profile.innerHTML = "";
   }
 }
