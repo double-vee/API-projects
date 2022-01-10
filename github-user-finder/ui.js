@@ -31,7 +31,11 @@ class UI {
     `;
   }
 
-  clearProfile() {
-    this.profile.innerHTML = "";
+  showAlert(message, className) {
+    const alert = document.createElement("div");
+    alert.className = className;
+    alert.innerText = message;
+    const container = document.querySelector(".searchContainer");
+    container.prepend(alert);
   }
 }
