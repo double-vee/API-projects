@@ -4,6 +4,7 @@ class UI {
   }
 
   showProfile(user) {
+    this.clearAlert();
     this.profile.innerHTML = `
       <div class="card card-body text-white bg-dark mt-3 mb-3">
         <div class="row">
@@ -32,10 +33,18 @@ class UI {
   }
 
   showAlert(message, className) {
+    this.clearAlert();
     const alert = document.createElement("div");
     alert.className = className;
     alert.innerText = message;
     const container = document.querySelector(".searchContainer");
     container.prepend(alert);
+  }
+
+  clearAlert() {
+    const currentAlert = document.querySelector(".alert");
+    if (currentAlert) {
+      currentAlert.remove();
+    }
   }
 }
