@@ -10,16 +10,18 @@ class UI {
         <div class="row">
           <div class="col-md-3">
             <img class="img-fluid w-100 mb-3" src="${user.avatar_url}">
-            <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block w-100 mb-4">View the profile</a>
+            <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block w-100 mb-3">View the profile</a>
           </div>
           <div class="col-md-9">
-            <span class="badge bg-primary mb-3">Public repos: ${user.public_repos}</span>
-            <span class="badge bg-secondary mb-3">Public gists: ${user.public_gists}</span>
-            <span class="badge bg-success mb-3">Followers: ${user.followers}</span>
-            <span class="badge bg-info mb-3">Following: ${user.following}</span>
+            <div class="d-flex flex-wrap gap-1 mb-3">
+              <span class="badge bg-primary">Public repos: ${user.public_repos}</span>
+              <span class="badge bg-secondary">Public gists: ${user.public_gists}</span>
+              <span class="badge bg-success">Followers: ${user.followers}</span>
+              <span class="badge bg-info">Following: ${user.following}</span>
+            </div>
             <ul class="list-group">
               <li class="list-group-item bg-dark">Company: ${user.company}</li>
-              <li class="list-group-item bg-dark">Website/Blog: ${user.blog}</li>
+              <li class="list-group-item bg-dark">Blog: ${user.blog}</li>
               <li class="list-group-item bg-dark">Location: ${user.location}</li>
               <li class="list-group-item bg-dark">Member since: ${user.created_at}</li>
               <li class="list-group-item bg-dark">Last update: ${user.updated_at}</li>
@@ -28,7 +30,7 @@ class UI {
         </div>
       </div>
       <h3 class="page-heading mb-4">Latest repos</h3>
-      <div id="repos"></div>
+      <div id="repos" class="mb-4"></div>
     `;
   }
 
@@ -38,7 +40,7 @@ class UI {
     repos.forEach((repo) => {
       html += `
       <div class="card text-white bg-dark mb-3 d-flex flex-column">
-        <div class="card-header d-flex justify-content-between">
+        <div class="card-header bg-dark d-flex justify-content-between">
           <a href="${repo.html_url}" target=_blank>${repo.name}</a>
           <div class="mb-1">
             <span class="badge bg-primary">Stars: ${

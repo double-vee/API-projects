@@ -6,3 +6,19 @@ body {
 .wrapper {
   min-height: 100%;
 }
+
+@media (max-width: 575px) {
+  .card-header {
+    flex-direction: column;
+  }
+
+  .card-header a {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-header {
+    flex-direction: row;
+  }
+}
