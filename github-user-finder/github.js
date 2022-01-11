@@ -9,11 +9,15 @@ class Github {
     const repoResponse = await fetch(
       `https://api.github.com/users/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}`
     );
-    const profileData = await profileResponse.json();
-    const repoData = await repoResponse.json();
+
+    const [profile, repos] = await Promise.all([
+      profileResponse.json(),
+      repoResponse.json(),
+    ]);
+
     return {
-      profile: profileData,
-      repos: repoData,
+      profile,
+      repos,
     };
   }
 }
