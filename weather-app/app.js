@@ -1,10 +1,11 @@
 const weather = new Weather("Warsaw", "PL");
+const ui = new UI();
 
 document.addEventListener("DOMContentLoaded", () => {
   weather
     .getWeather()
     .then((result) => {
-      console.log(result);
+      ui.paint(result);
     })
     .catch(console.log);
 });
