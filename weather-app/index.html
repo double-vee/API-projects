@@ -15,20 +15,32 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="container d-flex justify-content-center align-items-center">
+  <div id="wrapper" class="container d-flex justify-content-center align-items-center">
     <div class="card">
       <h3 id="w-location" class="card-header"></h3>
-      <div class="card-body">
-        <h5 id="w-desc" class="card-title"></h5>
-        <p id="w-string" class="card-text"></p>
+      <div class="card-body container">
+          <div class="row row-cols-2 align-items-center">
+            <div class="col">
+              <img alt="" id="w-icon" class="img-fluid">
+            </div>
+            <div class="col">
+              <h5 id="w-desc" class="card-title"></h5>
+            </div>
+            <div class="col">
+              <p id="w-temp" class="card-text"></p>
+            </div>
+            <div class="col">
+              <p id="w-temp-min" class="card-text"></p>
+              <p id="w-temp-max" class="card-text"></p>
+            </div>
+          </div>
       </div>
-      <div>
-        <img alt="" id="w-icon">
-      </div>
-      <ul id="w-details" class="list-group list-group-flush mt-3">
-        <li id="w-humidity" class="list-group-item"></li>
+      <ul id="w-details" class="list-group list-group-flush text-uppercase">
         <li id="w-feels-like" class="list-group-item"></li>
+        <li id="w-humidity" class="list-group-item"></li>
         <li id="w-wind" class="list-group-item"></li>
+        <li id="w-pressure" class="list-group-item"></li>
+        <li id="w-visibility" class="list-group-item"></li>
       </ul>
       <hr>
       <button type="button" class="btn btn-secondary mx-auto mb-3" data-bs-toggle="modal" data-bs-target="#locModal">

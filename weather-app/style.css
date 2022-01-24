@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
 html,
 body {
   height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -8,18 +11,87 @@ body {
   background-image: linear-gradient(135deg, #3ac599, #026ba8);
 }
 
-.container {
+#wrapper {
   min-height: 100%;
 }
 
-@media (max-width: 575px) {
-  .card {
-    width: 100%;
-  }
+.card-header {
+  padding: 1.25rem 2rem;
+  font-size: 1.75rem;
+  font-weight: 300;
 }
 
-@media (min-width: 576px) {
+.card-body {
+  padding: 1.25rem 2rem 1.75rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.card-title::first-letter {
+  text-transform: capitalize;
+}
+
+.card-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+#w-temp {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#w-temp-min {
+  margin-bottom: 0.25rem;
+}
+
+#w-details {
+  padding: 0.5rem 0;
+}
+
+#w-details .list-group-item {
+  padding: 0.5rem 2rem;
+  color: #41a1ac;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+}
+
+.col:nth-child(odd) {
+  text-align: center;
+}
+
+.modal-title {
+  font-weight: 400;
+}
+
+.form-group label {
+  margin-bottom: 0.25rem;
+  font-weight: 300;
+}
+
+@media (min-width: 400px) {
   .card {
-    width: 450px;
+    max-width: 400px;
+  }
+
+  .card-header {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  #w-temp {
+    font-size: 3rem;
   }
 }
