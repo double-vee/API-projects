@@ -1,4 +1,4 @@
-const weather = new Weather("Warsaw", "PL");
+const weather = new Weather("Warsaw", "PL", "metric");
 const ui = new UI();
 
 document.addEventListener("DOMContentLoaded", () => {
