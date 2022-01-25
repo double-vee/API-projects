@@ -13,4 +13,9 @@ class Weather {
     const result = await response.json();
     return result;
   }
+
+  changeLocation(city, state) {
+    this.city = city;
+    this.state = state;
+  }
 }
