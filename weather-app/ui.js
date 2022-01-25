@@ -31,4 +31,17 @@ class UI {
     this.pressure.textContent = `Pressure: ${main.pressure} hPa`;
     this.visibility.textContent = `Visibility: ${visibility} m`;
   }
+
+  closeModal() {
+    const modal = document.getElementById("locModal");
+    const modalBackdrop = document.querySelector(".modal-backdrop");
+    modal.classList.remove("show");
+    modal.setAttribute("style", "display: none");
+    modal.setAttribute("aria-hidden", "true");
+    modal.removeAttribute("aria-modal");
+    modal.removeAttribute("role");
+    modalBackdrop.remove();
+    document.body.setAttribute("style", "");
+    document.body.classList.remove("modal-open");
+  }
 }

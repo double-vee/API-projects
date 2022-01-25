@@ -18,4 +18,5 @@ document.getElementById("w-change-btn").addEventListener("click", (e) => {
 
   weather.changeLocation(city, state);
   showWeather();
+  ui.closeModal();
 });
