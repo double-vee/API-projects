@@ -42,10 +42,14 @@
         <li id="w-pressure" class="list-group-item"></li>
         <li id="w-visibility" class="list-group-item"></li>
       </ul>
-      <hr>
-      <button type="button" class="btn btn-secondary mx-auto mb-3" data-bs-toggle="modal" data-bs-target="#locModal">
-        Change location
-      </button>
+      <div class="btn-container d-flex">
+        <button type="button" id="btn-units" class="btn btn-outline-light">
+          Change units
+        </button>
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#locModal">
+          Change location
+        </button>
+      </div>
     </div>
 
     <div class="modal fade" id="locModal" tabindex="-1" aria-labelledby="locModalLabel" aria-hidden="true">
