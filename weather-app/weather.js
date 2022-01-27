@@ -11,11 +11,20 @@ class Weather {
       `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.state}&units=${this.units}&appid=${this.apiKey}`
     );
     const result = await response.json();
-    return result;
+    return {
+      data: result,
+      units: this.units,
+    };
   }
 
   changeLocation(city, state) {
     this.city = city;
     this.state = state;
+  }
+
+  changeUnits() {
+    this.units === "metric"
+      ? (this.units = "imperial")
+      : (this.units = "metric");
   }
 }
