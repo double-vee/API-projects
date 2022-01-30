@@ -27,7 +27,7 @@ body {
 
 .card-title {
   margin-bottom: 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 #w-temp {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
 }
 
@@ -97,7 +97,7 @@ body {
   font-weight: 300;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (min-height: 698px) {
   .card {
     max-width: 400px;
   }
@@ -139,5 +139,52 @@ body {
 
   .btn-container .btn {
     padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 500px) and (max-height: 698px) {
+  #wrapper {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "header header header"
+      "body body details"
+      "btn btn btn";
+  }
+
+  .card-header {
+    grid-area: header;
+    padding: 0.5rem 2rem;
+    font-size: 1.25rem;
+  }
+
+  .card-body {
+    grid-area: body;
+    padding: 0.5rem 2rem;
+  }
+
+  #w-details {
+    grid-area: details;
+    padding: 0.5rem 2rem;
+  }
+
+  #w-details .list-group-item {
+    padding: 0.25rem 0;
+  }
+
+  .btn-container {
+    grid-area: btn;
+    flex-direction: row;
+    padding: 1rem 2rem;
+  }
+
+  .btn-container .btn {
+    font-size: 1rem;
   }
 }
