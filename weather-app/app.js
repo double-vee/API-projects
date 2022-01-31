@@ -1,6 +1,9 @@
-const weather = new Weather("Warsaw", "PL", "metric");
 const ui = new UI();
 const storage = new Storage();
+const savedCity = storage.getLocation().city;
+const savedState = storage.getLocation().state;
+const savedUnits = storage.getUnits();
+const weather = new Weather(savedCity, savedState, savedUnits);
 
 document.addEventListener("DOMContentLoaded", showWeather);
 
