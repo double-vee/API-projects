@@ -6,25 +6,25 @@ class UI {
   showProfile(user) {
     this.clearAlert();
     this.profile.innerHTML = `
-      <div class="card card-body text-white bg-dark mt-3 mb-3">
+      <div class="card card-body my-3 py-3">
         <div class="row">
-          <div class="col-md-3">
-            <img class="img-fluid w-100 mb-3" src="${user.avatar_url}">
-            <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block w-100 mb-3">View the profile</a>
+          <div class="img-btn-wrap col-md-3">
+            <img class="img img-fluid mb-3" src="${user.avatar_url}">
+            <a href="${user.html_url}" target="_blank" class="btn btn-primary w-100">View profile</a>
           </div>
           <div class="col-md-9">
-            <div class="d-flex flex-wrap gap-1 mb-3">
-              <span class="badge bg-primary">Public repos: ${user.public_repos}</span>
-              <span class="badge bg-secondary">Public gists: ${user.public_gists}</span>
-              <span class="badge bg-success">Followers: ${user.followers}</span>
-              <span class="badge bg-info">Following: ${user.following}</span>
+            <div class="px-3 d-flex flex-wrap gap-2 mb-3">
+              <span class="badge rounded-pill">Public repos: ${user.public_repos}</span>
+              <span class="badge rounded-pill">Public gists: ${user.public_gists}</span>
+              <span class="badge rounded-pill">Followers: ${user.followers}</span>
+              <span class="badge rounded-pill">Following: ${user.following}</span>
             </div>
             <ul class="list-group">
-              <li class="list-group-item bg-dark">Company: ${user.company}</li>
-              <li class="list-group-item bg-dark">Blog: ${user.blog}</li>
-              <li class="list-group-item bg-dark">Location: ${user.location}</li>
-              <li class="list-group-item bg-dark">Member since: ${user.created_at}</li>
-              <li class="list-group-item bg-dark">Last update: ${user.updated_at}</li>
+              <li class="list-group-item">Company: ${user.company}</li>
+              <li class="list-group-item">Blog: ${user.blog}</li>
+              <li class="list-group-item">Location: ${user.location}</li>
+              <li class="list-group-item">Member since: ${user.created_at}</li>
+              <li class="list-group-item">Last update: ${user.updated_at}</li>
             </ul>
           </div>
         </div>
@@ -39,15 +39,17 @@ class UI {
 
     repos.forEach((repo) => {
       html += `
-      <div class="card text-white bg-dark mb-3 d-flex flex-column">
-        <div class="card-header bg-dark d-flex justify-content-between">
+      <div class="card mb-3 d-flex flex-column">
+        <div class="card-header d-flex justify-content-between">
           <a href="${repo.html_url}" target=_blank>${repo.name}</a>
           <div class="mb-1">
-            <span class="badge bg-primary">Stars: ${
+            <span class="badge rounded-pill">Stars: ${
               repo.stargazers_count
             }</span>
-            <span class="badge bg-info">Watchers: ${repo.watchers_count}</span>
-            <span class="badge bg-success">Forks: ${repo.forks_count}</span>
+            <span class="badge rounded-pill">Watchers: ${
+              repo.watchers_count
+            }</span>
+            <span class="badge rounded-pill">Forks: ${repo.forks_count}</span>
           </div>
         </div>
         <div class="card-body">

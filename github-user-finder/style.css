@@ -1,13 +1,102 @@
+:root {
+  --dark: #161e2b;
+  --darker: #0f1620;
+  --text: #b0bdcc;
+  --text-lighter: #edf0f5;
+}
+
 html,
 body {
   height: 100%;
+  background-color: var(--darker);
+  color: var(--text-lighter);
+  font-family: 'Poppins', sans-serif;
 }
 
 .wrapper {
   min-height: 100%;
 }
 
-@media (max-width: 575px) {
+.navbar,
+.card,
+.card-header,
+.list-group-item,
+.footer {
+  background-color: var(--dark);
+}
+
+.searchContainer {
+  padding: 1rem;
+}
+
+.search {
+  padding: 1rem 0;
+  background-color: var(--darker);
+}
+
+.search h1 {
+  color: var(--text-lighter);
+}
+
+.lead {
+  font-size: 1rem;
+}
+
+#searchUser {
+  border: 1px solid var(--text);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--text);
+  font-weight: 300;
+}
+
+#searchUser::placeholder {
+  color: var(--text);
+}
+
+.card-body,
+.list-group-item {
+  color: var(--text);
+  font-weight: 300;
+}
+
+.list-group-item:last-child {
+  padding-bottom: 0;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.btn {
+  border-radius: 32px;
+}
+
+.badge {
+  border: 1px solid var(--text);
+  background-color: var(--dark);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.card-header .badge {
+  margin: 0 4px 6px 0;
+}
+
+.footer {
+  color: var(--text);
+}
+
+@media (max-width: 766px) {
+  .img-btn-wrap {
+    padding: 0 28px;
+  }
+
+  .btn {
+    margin-bottom: 24px;
+  }
+
   .card-header {
     flex-direction: column;
   }
@@ -17,7 +106,7 @@ body {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 767px) {
   .card-header {
     flex-direction: row;
   }

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
   <title>GitHub User Finder</title>
@@ -15,20 +18,20 @@
 </head>
 <body>
   <div class="wrapper d-flex flex-column">
-    <nav class="navbar navbar-dark bg-dark mb-5">
+    <nav class="navbar mb-5">
       <div class="container">
         <a href="#" class="navbar-brand">GitHub User Finder</a>
       </div>
     </nav>
     <div class="container searchContainer">
-      <div class="search card card-body bg-primary">
+      <div class="search card card-body">
         <h1>Search GitHub users</h1>
         <p class="lead">Enter a username to fetch a profile and repos</p>
         <input type="text" id="searchUser" class="form-control" placeholder="GitHub username">
       </div>
       <div id="profile"></div>
     </div>
-    <footer class="mt-auto p-3 text-center bg-dark">GitHub User Finder &copy;</footer>
+    <footer class="footer mt-auto p-3 text-center">GitHub User Finder &copy;</footer>
   </div>
 </body>
 </html>
