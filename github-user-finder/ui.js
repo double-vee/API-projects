@@ -9,7 +9,9 @@ class UI {
       <div class="card card-body my-3 py-3">
         <div class="row">
           <div class="img-btn-wrap col-md-3">
-            <img class="img img-fluid mb-3" src="${user.avatar_url}">
+            <img class="img img-fluid mb-3" src="${
+              user.avatar_url
+            }" alt="GitHub avatar of the user ${user.login}">
             <a href="${
               user.html_url
             }" target="_blank" class="btn btn-primary w-100">View profile</a>
