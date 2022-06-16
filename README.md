@@ -14,23 +14,24 @@ Built with:
 - JavaScript ES6 classes
 - CSS3 media queries
 - Bootstrap 5 + Bootswatch Quartz theme
-- Open Weather API
+- OpenWeatherMap API
 
 Live site: [https://double-vee-weather-app.netlify.app](https://double-vee-weather-app.netlify.app)
 
-<figure>
-  <img src="./weather_app_vertical.png" width="60%" alt="Weather app portrait">
-  <figcaption></figcaption>
-</figure>
+<img src="./weather_app_vertical.png" width="50%" alt="Weather app portrait">
 
 <figure>
+  <figcaption>
+    <p>Change units between metric and imperial:</p>
+  </figcaption>
   <img src="./weather_app_units.png" alt="Weather app landscape">
-  <figcaption>Change units between metric and imperial.</figcaption>
 </figure>
 
 <figure>
+  <figcaption>
+    <p>Change location:</p>
+  </figcaption>
   <img src="./weather_app_location.png" alt="Change location">
-  <figcaption>Change location.</figcaption>
 </figure>
 
 ## GitHub User Finder
@@ -40,7 +41,6 @@ Another class-based API project from Brad Traversy’s _Modern JavaScript From T
 Built with:
 
 - JavaScript ES6 classes
-- Regular expressions
 - CSS3 variables and media queries
 - Bootstrap 5 + Bootswatch Superhero theme
 - GitHub API
@@ -48,6 +48,8 @@ Built with:
 Live site: [https://double-vee-github-user-finder.netlify.app](https://double-vee-github-user-finder.netlify.app)
 
 <figure>
-  <img src="./github_user_finder.png" alt="Github user finder app">
-  <figcaption>Start typing to see results.</figcaption>
+  <figcaption>
+    <p>Start typing to see results:</p>
+  </figcaption>
+  <img src="./github_user_finder.png" width="80%" alt="Github user finder app">
 </figure>
